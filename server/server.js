@@ -4,6 +4,8 @@ const colors = require('colors');
 
 const express = require('express');
 
+const bcrypt = require('bcrypt');
+
 const mongoose = require('mongoose');
 
 const app = express();
@@ -16,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.use (require('./routes/usuario'));
+app.use(require('./routes/usuario'));
 
 
 
